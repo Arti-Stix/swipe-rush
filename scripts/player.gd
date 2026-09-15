@@ -1,9 +1,8 @@
 extends CharacterBody2D
 class_name Player
 
-## Reskin note: swap the "Visual" child node (currently a ColorRect) for
-## your own sprite/AnimatedSprite2D. Nothing else in this script cares
-## what the player looks like.
+## Reskin note: swap the "Visual" child node for your own sprite/
+## AnimatedSprite2D. Nothing else in this script cares what the player looks like.
 
 var config: GameConfig
 var current_lane: int = 1

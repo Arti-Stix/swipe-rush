@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var camera: ShakeCamera = $Camera2D
 @onready var spawner: LaneSpawner = $LaneSpawner
+@onready var player: Player = $Player
 
 @onready var score_label: Label = $UI/HUD/ScoreLabel
 @onready var combo_label: Label = $UI/HUD/ComboLabel
@@ -31,6 +32,9 @@ extends Node2D
 var package_icon_start_pos: Vector2
 
 func _ready() -> void:
+	_update_viewport_layout()
+	get_viewport().size_changed.connect(_update_viewport_layout)
+
 	brand_label.text = GameManager.config.game_title
 	title_label.text = GameManager.config.intro_headline
 	subtitle_label.text = GameManager.config.swipe_hint_text
@@ -57,18 +61,35 @@ func _ready() -> void:
 	start_panel.visible = true
 	progress_bar.max_value = GameManager.config.level_length
 
+
+
+func _update_viewport_layout() -> void:
+	# With stretch/aspect="expand", tall phones expose more world space.
+	# Keep the camera centered on the actual viewport and anchor the player
+	# near the bottom so the perspective road fills the newly available area.
+	var size: Vector2 = get_viewport_rect().size
+	camera.position = size * 0.5
+
+	player.position.x = size.x * 0.5
+	player.position.y = size.y * 0.86
+	player._setup_lanes()
+
+	if spawner:
+		spawner.update_layout()
+
 func _on_start_pressed() -> void:
 	start_panel.visible = false
 	GameManager.start_game()
 	spawner.begin_spawning()
 
 func _on_restart_pressed() -> void:
-	get_tree().reload_current_scene()
+	_restart_game()
 
 func _on_cta_pressed() -> void:
-	# STUB: this is where a real playable ad would call the ad network's
-	# "click to install / open store" bridge function.
-	print("[CTA] Store/redirect link would open here.")
+	_restart_game()
+
+func _restart_game() -> void:
+	get_tree().reload_current_scene()
 
 func _on_score_changed(new_score: int) -> void:
 	score_label.text = "Score: %d" % new_score

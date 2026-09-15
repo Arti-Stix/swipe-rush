@@ -22,7 +22,10 @@ GameManager="*res://scripts/game_manager.gd"
 
 window/size/viewport_width=720
 window/size/viewport_height=1280
+window/size/always_on_top=true
+window/size/extend_to_title=true
 window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 window/handheld/orientation=1
 
 [input_devices]

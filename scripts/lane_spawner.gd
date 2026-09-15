@@ -34,11 +34,18 @@ func _ready() -> void:
 	config = GameManager.config
 	player = get_node(player_path)
 	lane_positions = player.lane_positions
+	update_layout()
+	get_viewport().size_changed.connect(update_layout)
+	set_process(false)
+
+func update_layout() -> void:
+	if player == null:
+		return
 	var size: Vector2 = get_viewport_rect().size
 	horizon_y = size.y * config.horizon_ratio
 	floor_y = player.position.y
 	vanishing_x = size.x / 2.0
-	set_process(false)
+	lane_positions = player.lane_positions
 
 func begin_spawning() -> void:
 	active_items.clear()
