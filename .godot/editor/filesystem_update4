@@ -1,2 +1,3 @@
 res://scenes/main.tscn
 res://scripts/player.gd
+res://config/default_config.tres

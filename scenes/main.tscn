@@ -58,6 +58,8 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="ScoreLabel" type="Label" parent="UI/HUD"]
 layout_mode = 0
@@ -97,6 +99,8 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Dim" type="ColorRect" parent="UI/StartPanel"]
 layout_mode = 0
@@ -155,6 +159,8 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Dim" type="ColorRect" parent="UI/WinPanel"]
 layout_mode = 0
@@ -216,6 +222,8 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Dim" type="ColorRect" parent="UI/LosePanel"]
 layout_mode = 0
@@ -267,6 +275,8 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="DoorIcon" type="ColorRect" parent="UI/DeliveryAnim"]
 layout_mode = 0

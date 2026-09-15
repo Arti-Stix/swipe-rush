@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="GameConfig" load_steps=2 format=3]
+[gd_resource type="Resource" script_class="GameConfig" load_steps=2 format=3 uid="uid://vqbpixdyefop"]
 
 [ext_resource type="Script" path="res://config/game_config.gd" id="1"]
 
@@ -7,7 +7,7 @@ script = ExtResource("1")
 lane_count = 3
 lane_width = 220.0
 lane_switch_speed = 12.0
-swipe_threshold = 40.0
+swipe_threshold = 160.0
 forward_speed = 500.0
 speed_increase_per_second = 12.0
 max_forward_speed = 1200.0
@@ -34,7 +34,7 @@ player_accent_color = Color(0.85, 0.2, 0.2, 1)
 package_color = Color(0.65, 0.45, 0.25, 1)
 package_tape_color = Color(0.9, 0.85, 0.7, 1)
 hazard_color = Color(0.35, 0.38, 0.42, 1)
-hazard_stripe_color = Color(1.0, 0.75, 0.1, 1)
+hazard_stripe_color = Color(1, 0.75, 0.1, 1)
 sky_color_top = Color(0.42, 0.62, 0.92, 1)
 sky_color_bottom = Color(0.78, 0.85, 0.95, 1)
 rooftop_color_a = Color(0.55, 0.53, 0.58, 1)

@@ -12,6 +12,7 @@ var lane_positions: Array[float] = []
 
 var is_dragging: bool = false
 var drag_start_pos: Vector2 = Vector2.ZERO
+var lane_tween: Tween = null
 
 @onready var visual: Node2D = $Visual
 
@@ -72,6 +73,16 @@ func _try_switch_lane(direction: float) -> void:
 	if new_lane != current_lane:
 		current_lane = new_lane
 		target_x = lane_positions[current_lane]
+
+		# Snap between lanes quickly instead of using a floaty frame-by-frame lerp.
+		if lane_tween and lane_tween.is_valid():
+			lane_tween.kill()
+
+		lane_tween = create_tween()
+		lane_tween.set_trans(Tween.TRANS_QUAD)
+		lane_tween.set_ease(Tween.EASE_OUT)
+		lane_tween.tween_property(self, "position:x", target_x, 0.09)
+
 		_play_lane_switch_juice(sign(direction))
 
 func _play_lane_switch_juice(direction: float) -> void:
@@ -88,8 +99,9 @@ func _on_obstacle_hit() -> void:
 	tween.tween_property(visual, "modulate", Color(1, 0.3, 0.3), 0.05)
 	tween.tween_property(visual, "modulate", Color(1, 1, 1), 0.25)
 
-func _physics_process(delta: float) -> void:
-	position.x = lerp(position.x, target_x, delta * config.lane_switch_speed)
+func _physics_process(_delta: float) -> void:
+	# Lane movement is handled by the short tween in _try_switch_lane().
+	pass
 
 func hit_obstacle() -> void:
 	GameManager.lose_game()
