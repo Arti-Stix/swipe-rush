@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="GameConfig" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://config/game_config.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+lane_count = 3
+lane_width = 220.0
+lane_switch_speed = 12.0
+swipe_threshold = 40.0
+forward_speed = 500.0
+speed_increase_per_second = 12.0
+max_forward_speed = 1200.0
+level_length = 8000.0
+checkpoint_interval = 2000.0
+wave_interval = 1.1
+collectible_fill_chance = 0.75
+spawn_y_position = -100.0
+horizon_ratio = 0.42
+item_min_scale = 0.18
+collectible_value = 10
+combo_multiplier_step = 0.5
+combo_max_multiplier = 4.0
+combo_reset_time = 2.0
+game_title = "ROOFTOP RUSH"
+intro_headline = "DELIVER THE PACKAGE!"
+cta_text = "PLAY AGAIN"
+win_message = "DELIVERY COMPLETE!"
+lose_message = "MISSED DELIVERY!"
+swipe_hint_text = "SWIPE TO MOVE"
+best_score_label = "Best"
+player_color = Color(0.95, 0.55, 0.15, 1)
+player_accent_color = Color(0.85, 0.2, 0.2, 1)
+package_color = Color(0.65, 0.45, 0.25, 1)
+package_tape_color = Color(0.9, 0.85, 0.7, 1)
+hazard_color = Color(0.35, 0.38, 0.42, 1)
+hazard_stripe_color = Color(1.0, 0.75, 0.1, 1)
+sky_color_top = Color(0.42, 0.62, 0.92, 1)
+sky_color_bottom = Color(0.78, 0.85, 0.95, 1)
+rooftop_color_a = Color(0.55, 0.53, 0.58, 1)
+rooftop_color_b = Color(0.5, 0.48, 0.53, 1)
+skyline_color = Color(0.32, 0.34, 0.42, 1)
+lane_marking_color = Color(1, 1, 1, 0.35)

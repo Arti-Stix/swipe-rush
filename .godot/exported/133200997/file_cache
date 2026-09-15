@@ -1,0 +1,7 @@
+res://config/default_config.tres::b5a714b17dead42d932b6c4935ac673c::1789471403::res://.godot/exported/133200997/export-68ab35da4092042c8674a57dbd45e364-default_config.res
+res://scenes/collectible.tscn::58b74739e197d97042f3d524b58a4582::1789471403::res://.godot/exported/133200997/export-9e359d3c97d4eebaf817c72f6e0e54d5-collectible.scn
+res://scenes/main.tscn::053441f19e29a9ee2657aa2e5b888754::1789471423::res://.godot/exported/133200997/export-3ad5c15c4f3250da0cc7c1af1770d85f-main.scn
+res://scenes/obstacle.tscn::b0bd158ca3accd8e0aa7196536481b1e::1789471403::res://.godot/exported/133200997/export-4d229fce99bc30f190803dcf0c53b994-obstacle.scn
+res://scenes/particle_burst.tscn::84c7521a786ce9f277414ca3fa9c4dc8::1789471403::res://.godot/exported/133200997/export-262d73fff931f83821d998d6537f51fd-particle_burst.scn
+res://scenes/player.tscn::c4cc9d247cf7a61ed29c9e12faab7e87::1789471403::res://.godot/exported/133200997/export-234fb6894ec6226e856ab7f825500d3d-player.scn
+res://scenes/score_popup.tscn::7134a9242499604a13fb7261205be3e8::1789471403::res://.godot/exported/133200997/export-464000de18ac23ebcc645679a7058e3e-score_popup.scn
