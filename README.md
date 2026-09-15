@@ -30,7 +30,8 @@ The game is currently being developed and tested.
 
 ## 👥 Team
 
-Arti-Stix + contributors
+Arti-Stix + itzsheiky
+
 
 ## 📄 License
 
